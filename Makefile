@@ -6,7 +6,7 @@
 #    By: nguiard <nguiard@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/07 12:59:14 by nguiard           #+#    #+#              #
-#    Updated: 2022/06/07 14:21:01 by nguiard          ###   ########.fr        #
+#    Updated: 2022/06/08 14:29:41 by nguiard          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,11 @@ lldb: lldb.out
 
 printf: printf.out
 	gcc main_printf.c -o printf.out
+
+list: list.out
+	gcc 
 	
 clean:
 	rm -f fsan.out normal.out lldb.out printf.out
 
-.PHONY: normal.out fsan.out lldb.out
+.PHONY: normal.out fsan.out lldb.out printf.out
