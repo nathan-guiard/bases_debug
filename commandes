@@ -1,0 +1,60 @@
+LLDB:
+run
+r
+    Lance l'exécution du programme.
+
+breakpoint set –name
+br s -n
+b
+    Met un breakpoint à la fonction passée en argument.
+
+breakpoint set –file <nom de fichier> –line <No de ligne>
+breakpoint set -f <nom de fichier> -l <No de ligne>
+    Met un breakpoint sur la ligne d’un fichier
+
+breakpoint list
+	Liste les breakpoints avec leur numero
+
+breakpoint delete <No breakpoint>
+	supprime un breakpoint
+
+frame variable
+fr v
+	montre les valeurs des variables
+
+step
+s
+	avance dans une fonction, avance tout court si 
+	la ligne n'est pas une fonction
+
+next
+n
+	saute une ligne sans entrer dans la fonction
+	mais en l'excutant quand meme.
+	Si la fonction contenait un breakpoint, il s'activera
+
+continue
+c
+	continue l'execution du programme jusqu'au prochain breakpoint.
+	si il n'y a plus de breakpoints, jusqu'a la fin du programme.
+
+print
+	affiche la valeur d'une variable ou affiche la valeur de retour
+	d'une fonction EN L'EXECUTANT.
+
+expr
+	change la valeur d'une variable ou execute une fonction.
+
+command alias <nom de l'alias> <commande>
+	cree un alias pour une commande
+
+command unalias <nom de l'alias>
+	supprime un alias
+
+VSCODE:
+Onglet "run and debug"
+create a launch.json file
+GDB/LLDB
+Add configuration (en bas a droite)
+GDB (launch)
+Changer la ligne "program" pour mettre le vrai nom de l'executable
